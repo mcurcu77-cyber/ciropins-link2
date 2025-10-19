@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Ciropiocolucci — Link Hub</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg1: #0f172a; /* navy */
+      --bg2: #0b1220; /* darker */
+      --card: rgba(255,255,255,0.04);
+      --accent1: #ff6b6b;
+      --accent2: #7c5cff;
+      --glass: rgba(255,255,255,0.06);
+      --text: #e6eef8;
+      --muted: #9fb0d6;
+      --radius: 18px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial;color:var(--text);background:linear-gradient(180deg,var(--bg1),var(--bg2));-webkit-font-smoothing:antialiased}
+
+    .wrap{
+      min-height:100vh;display:flex;align-items:center;justify-content:center;padding:40px;
+    }
+
+    .card{
+      width:100%;max-width:920px;background:linear-gradient(180deg,rgba(255,255,255,0.02),rgba(255,255,255,0.01));border-radius:var(--radius);padding:28px;box-shadow:0 8px 40px rgba(2,6,23,0.6);backdrop-filter: blur(8px);border:1px solid rgba(255,255,255,0.04);
+      display:grid;grid-template-columns:1fr 320px;gap:24px;align-items:center;
+    }
+
+    @media (max-width:800px){
+      .card{grid-template-columns:1fr;max-width:420px;padding:20px}
+    }
+
+    .left{
+      padding:12px 6px;
+    }
+
+    .brand{display:flex;align-items:center;gap:14px}
+    .logo{width:72px;height:72px;border-radius:14px;background:linear-gradient(135deg,var(--accent1),var(--accent2));display:flex;align-items:center;justify-content:center;font-weight:700;color:white;font-size:26px;box-shadow:0 6px 20px rgba(124,92,255,0.16)}
+    .title h1{margin:0;font-size:20px;letter-spacing:-0.2px}
+    .title p{margin:6px 0 0;color:var(--muted);font-size:14px}
+
+    .desc{margin-top:20px;color:var(--muted);line-height:1.45}
+
+    .links{display:flex;flex-direction:column;gap:12px;margin-top:20px}
+
+    .btn{
+      display:inline-flex;align-items:center;gap:12px;padding:12px 16px;border-radius:12px;background:var(--glass);border:1px solid rgba(255,255,255,0.03);text-decoration:none;color:var(--text);font-weight:600;transition:transform .12s ease,box-shadow .12s ease,background .12s ease;box-shadow:0 4px 18px rgba(2,6,23,0.45)
+    }
+    .btn:hover{transform:translateY(-4px);box-shadow:0 18px 40px rgba(2,6,23,0.6)}
+    .btn:active{transform:translateY(-1px)}
+
+    .btn svg{width:22px;height:22px;flex-shrink:0}
+
+    .btn.instagram{background:linear-gradient(90deg,#f58529,#dd2a7b,#8134af);color:white}
+    .btn.discord{background:linear-gradient(90deg,#5865f2,#7289da);color:white}
+
+    .right{
+      padding:12px;border-radius:12px;background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);border:1px solid rgba(255,255,255,0.03);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px
+    }
+    .avatar{width:140px;height:140px;border-radius:16px;background:linear-gradient(180deg,rgba(255,255,255,0.03),rgba(255,255,255,0.01));display:flex;align-items:center;justify-content:center;font-size:56px}
+    .meta{color:var(--muted);text-align:center;font-size:14px}
+
+    .small{font-size:12px;color:var(--muted)}
+
+    footer{margin-top:22px;color:var(--muted);font-size:13px;text-align:center}
+
+    /* focus states for accessibility */
+    .btn:focus{outline:3px solid rgba(124,92,255,0.18);outline-offset:3px}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <main class="card" role="main" aria-labelledby="main-title">
+      <section class="left">
+        <div class="brand">
+          <div class="logo" aria-hidden>CP</div>
+          <div class="title">
+            <h1 id="main-title">Ciropiocolucci — Link Hub</h1>
+            <p>Collegamenti rapidi — Instagram • Discord</p>
+          </div>
+        </div>
+
+        <p class="desc">Benvenuto! Qui trovi i miei link ufficiali. Tocca il pulsante desiderato per aprire il profilo Instagram o l'invito Discord. Il sito è pensato per essere pulito, veloce e mobile-friendly.</p>
+
+        <nav class="links" aria-label="Link principali">
+          <a class="btn instagram" href="https://www.instagram.com/ciropiocolucci/" target="_blank" rel="noopener noreferrer">
+            <!-- Instagram SVG -->
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden>
+              <rect width="24" height="24" rx="6" fill="white" opacity="0.08"/>
+              <path d="M7 2.5h10a4 4 0 0 1 4 4v10a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V6.5a4 4 0 0 1 4-4z" stroke="white" stroke-opacity="0.9" stroke-width="0.6" fill="none"/>
+              <path d="M12 7.3a4.7 4.7 0 1 0 0 9.4 4.7 4.7 0 0 0 0-9.4z" stroke="white" stroke-opacity="0.95" stroke-width="0.6" fill="none"/>
+              <circle cx="17.6" cy="6.4" r="0.6" fill="white"/>
+            </svg>
+            Apri Instagram
+          </a>
+
+          <a class="btn discord" href="https://discord.gg/gAzejGAr47" target="_blank" rel="noopener noreferrer">
+            <!-- Discord SVG -->
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden>
+              <path d="M20.1 4S18.5 3 16.9 2.6c0 0-1.2 2-4.9 2-3.7 0-4.9-2-4.9-2C5.5 3 3.9 4 3.9 4 2 7 2 10.8 2 10.8c0 0 2.3 1.1 4.2 1.9 0 0-.1 1 .3 2.3 0 0 3.1 1.6 7.1 1.6s7-1.6 7-1.6c.4-1.3.3-2.3.3-2.3 1.9-.8 4.2-1.9 4.2-1.9 0 0 0-3.8-1.9-6.8z" fill="white" opacity="0.95"/>
+            </svg>
+            Entra su Discord
+          </a>
+        </nav>
+
+        <footer>
+          <div class="small">Link controllati: <time datetime="2025-10-19">19 ottobre 2025</time></div>
+        </footer>
+      </section>
+
+      <aside class="right" aria-label="Informazioni utente">
+        <div class="avatar" aria-hidden>CP</div>
+        <div class="meta">
+          <strong>@ciropiocolucci</strong>
+          <div style="margin-top:8px;color:var(--muted)">Seguimi per aggiornamenti, foto e progetti.</div>
+        </div>
+        <div style="height:8px"></div>
+        <div class="small">Questo sito è un semplice hub di link. Funziona su dispositivi mobili e desktop.</div>
+      </aside>
+    </main>
+  </div>
+</body>
+</html>
